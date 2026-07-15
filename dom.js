@@ -25,3 +25,27 @@ console.log(firstLink);
 // 7. The last paragraph
 const lastParagraph = document.querySelector("p:last-of-type");
 console.log(lastParagraph);
+
+// 1. Select the header, then navigate to the nav inside it
+const header = document.querySelector("header");
+const nav = header.querySelector("nav");
+
+console.log(nav);
+
+// 2. Select the first .nav-link, then get its parent li
+console.log(firstLink.parentElement);
+
+// 3. Select the article, then get its next sibling (section)
+const article = document.querySelector("article");
+
+console.log(article.nextElementSibling);
+
+// 4. Select the ul, then get all its child li elements
+const ul = document.querySelector("ul");
+
+console.log(ul.children);
+
+// 5. Start from the footer and navigate up to the body
+const footer = document.querySelector("footer");
+
+console.log(footer.parentElement);
