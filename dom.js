@@ -94,3 +94,55 @@ Object.assign(container.style, {
   color: "white",
   padding: "20px"
 });
+
+//exercise 9.4
+// Exercise 1: Creating Elements
+
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "This is a new paragraph!";
+newParagraph.className = "content highlight";
+
+// Add to the article
+article.appendChild(newParagraph);
+
+// Move it before the first paragraph
+const firstParagraph = article.querySelector("p");
+article.insertBefore(newParagraph, firstParagraph);
+
+// Exercise 2: Removing Elements
+
+const footerElement = document.querySelector("footer");
+footerElement.remove();
+
+const navElement = document.querySelector("nav");
+const lastLink = navElement.querySelector("li:last-child");
+
+lastLink.parentElement.removeChild(lastLink);
+
+// Exercise 3: Cloning Elements
+
+const navItem = document.querySelector(".nav-link").parentElement;
+
+const clone = navItem.cloneNode(true);
+
+clone.querySelector("a").textContent = "New Link";
+
+document.querySelector(".nav-list").appendChild(clone);
+
+// Build Task
+
+function addNavItem(text, href) {
+    const li = document.createElement("li");
+
+    const a = document.createElement("a");
+    a.textContent = text;
+    a.href = href;
+    a.className = "nav-link";
+
+    li.appendChild(a);
+
+    document.querySelector(".nav-list").appendChild(li);
+}
+
+addNavItem("Blog", "/blog");
+addNavItem("Portfolio", "/portfolio");
