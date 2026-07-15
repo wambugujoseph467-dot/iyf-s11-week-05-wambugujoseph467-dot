@@ -49,3 +49,48 @@ console.log(ul.children);
 const footer = document.querySelector("footer");
 
 console.log(footer.parentElement);
+
+//exercise 9.3
+
+// Exercise 1: Text Content
+
+const h1 = document.querySelector("h1");
+
+console.log(h1.textContent);
+console.log(h1.innerText);
+
+h1.textContent = "New Title";
+
+// Exercise 2: HTML Content
+
+console.log(article.innerHTML);
+
+article.innerHTML = `
+<h2>Updated Article</h2>
+<p>This is new content.</p>
+`;
+
+// Exercise 3: Attributes
+
+console.log(firstLink.getAttribute("href"));
+console.log(firstLink.href);
+
+firstLink.setAttribute("href", "https://example.com");
+
+console.log(firstLink.hasAttribute("target"));
+
+firstLink.removeAttribute("target");
+
+// Exercise 4: Styles
+
+const container = document.querySelector(".container");
+
+container.style.backgroundColor = "#f0f0f0";
+container.style.padding = "30px";
+container.style.borderRadius = "8px";
+
+Object.assign(container.style, {
+  backgroundColor: "#333",
+  color: "white",
+  padding: "20px"
+});
