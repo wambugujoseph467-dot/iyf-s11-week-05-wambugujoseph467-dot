@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10.4 - Form Handling</title>
+
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        form {
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form id="contact-form">
+
+    <label>Name</label><br>
+    <input type="text" id="name" name="name">
+
+    <label>Email</label><br>
+    <input type="email" id="email" name="email">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<div id="success-message"></div>
+
+<script src="exercise5.js"></script>
+
+</body>
+</html>
