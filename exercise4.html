@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10.3</title>
+
+    <style>
+        #grandparent {
+            background: lightblue;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        #parent {
+            background: lightgreen;
+            padding: 40px;
+        }
+
+        #child {
+            background: lightcoral;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Exercise 1: Event Bubbling</h2>
+
+<div id="grandparent">
+    Grandparent
+    <div id="parent">
+        Parent
+        <div id="child">
+            Child
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<h2>Exercise 2: Event Delegation</h2>
+
+<ul>
+    <li class="item">Apple</li>
+    <li class="item">Banana</li>
+    <li class="item">Orange</li>
+</ul>
+
+<script src="exercise4.js"></script>
+
+</body>
+</html>
